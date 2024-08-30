@@ -1,0 +1,33 @@
+﻿<Window x:Class="Login.Home"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Login"
+        mc:Ignorable="d"
+        Title="Diary" Height="550" Width="960">
+   
+        <DockPanel>
+        <DockPanel.Background>
+            <ImageBrush ImageSource="C:\Users\HP\OneDrive\Pictures\Camera Roll\page.jpg"></ImageBrush>
+        </DockPanel.Background>
+            <DockPanel DockPanel.Dock="Top">
+            <Menu>
+                <MenuItem Header="Diary">
+                   <MenuItem Header="Create"   Click="MenuItem_Click"></MenuItem>
+                    <MenuItem Header="Content"  Click="MenuItem_Click_1"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="view">
+                    <MenuItem Header="Data"   Click="MenuItem_Click"></MenuItem>
+                    <MenuItem Header="Edit"  Click="MenuItem_Click_1"></MenuItem>
+                </MenuItem>
+                <Button Content="Log Out" x:Name="btnlogout"  Margin="800,0,0,0" Height="30" Width="50" Click="btnlogout_Click"></Button>
+            </Menu>
+            
+            
+        </DockPanel>
+        
+            <Frame NavigationUIVisibility="Hidden" x:Name="mainframe" ></Frame>
+        </DockPanel>
+    
+</Window>

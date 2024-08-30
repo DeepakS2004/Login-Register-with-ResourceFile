@@ -1,0 +1,66 @@
+﻿<Page x:Class="Login.diary"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Login"
+      xmlns:lang="clr-namespace:Login.language"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="800"
+      Title="diary" Background="White">
+    <ScrollViewer VerticalScrollBarVisibility="Visible">
+        
+            <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="C:\Users\HP\OneDrive\Pictures\Camera Roll\page.jpg"></ImageBrush>
+            </Grid.Background>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="25"></ColumnDefinition>
+                    <ColumnDefinition Width="500"></ColumnDefinition>
+                    <ColumnDefinition ></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="38"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="20"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="20"></RowDefinition>
+                    <RowDefinition Height="0"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="230"></RowDefinition>
+                    <RowDefinition Height="20"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+
+                </Grid.RowDefinitions>
+                <Label Content="{x:Static lang:Resourcefile.dairy}" Margin="380,0,0,0" Grid.Column="1" Grid.Row="0"   FontSize="20" FontWeight="Bold"></Label>
+                <Label Content="{x:Static lang:Resourcefile.date }"  FontSize="15" Grid.Column="1" Grid.Row="3" FontWeight="Medium" ></Label>
+                <DatePicker Width="300" Height="30"  Margin="0,0,240,0" Grid.Column="1" Grid.Row="4"></DatePicker>
+                <Label Content="{x:Static lang:Resourcefile.activity}" Grid.Column="1" Grid.Row="7" FontSize="15" FontWeight="Medium"></Label>
+                
+                <TextBox x:Name="txtcontent" AcceptsReturn="True"  Width="500"  FontSize="15" Grid.Row="8" Grid.Column="1"   >
+                <TextBox.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Open" Click="MenuItem_Click"></MenuItem>
+                        <MenuItem Header="Save" Click="MenuItem_Click_1"></MenuItem>
+                        <MenuItem Header="Clear" Click="MenuItem_Click_2"></MenuItem>
+                        <MenuItem Header="Cut" Command="Cut" ></MenuItem>
+                        <MenuItem Header="Copy" Command="Copy"></MenuItem>
+                        <MenuItem Header="Paste" Command="Paste"></MenuItem>
+                    </ContextMenu>
+                </TextBox.ContextMenu>
+                </TextBox>
+            <Button Content="{x:Static lang:Resourcefile.Save}" Margin="290,0,0,0" Width="100" Grid.Row="10" Grid.Column="1" x:Name="btnsave">
+                <Button.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Green" Click="MenuItem_Click_3"></MenuItem>
+                        <MenuItem Header="Red" Click="MenuItem_Click_4"></MenuItem>
+                    </ContextMenu>
+                </Button.ContextMenu>
+                </Button>
+            </Grid>
+        
+    </ScrollViewer>
+</Page>

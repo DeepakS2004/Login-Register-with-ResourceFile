@@ -1,0 +1,71 @@
+﻿<Window x:Class="Login.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Login"
+        xmlns:lang="clr-namespace:Login.language"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="960">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="550"></ColumnDefinition>
+            <ColumnDefinition Width="300"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.Background >
+            <ImageBrush ImageSource="C:\Users\HP\OneDrive\Pictures\Camera Roll\page.jpg"></ImageBrush>
+        </Grid.Background>
+       
+        <Label  Content="{x:Static lang:Resourcefile.lang}" Grid.Row="14" Grid.Column="1" Margin="245,0,0,0" FontSize="10" FontWeight="Medium"></Label>
+        <Button x:Name="lang1bn" Content="{x:Static lang:Resourcefile.tamil}" Grid.Column="2" Grid.Row="14" Click="lang1bn_Click" ></Button>
+        <Button x:Name="lang4bn" Content="English" Grid.Column="3" Grid.Row="14" Click="lang4bn_Click"></Button>
+        <Button x:Name="lang2bn" Content="{x:Static lang:Resourcefile.hindi}" Grid.Column="2" Grid.Row="15" Click="lang2bn_Click" ></Button>
+        <Button x:Name="lang3bn" Content="{x:Static lang:Resourcefile.telugu}" Grid.Column="3" Grid.Row="15" Click="lang3bn_Click" ></Button>
+        
+
+            <Label Content="{x:Static lang:Resourcefile.login}" Foreground="Black" Grid.Row="0" Grid.Column="1" FontSize="20" FontWeight="Bold" Margin="80,30,0,0">
+        </Label>
+        <Label  Content="{x:Static lang:Resourcefile.name}" Foreground="Black" Grid.Row="1" Grid.Column="1" FontWeight="Medium" FontSize="15"></Label>
+        <TextBox x:Name="txtusername" Grid.Column="1"  Grid.Row="2" FontSize="15" BorderThickness="2"></TextBox>
+        <Label Content="{x:Static lang:Resourcefile.pw}" Foreground="Black" Grid.Row="4" Grid.Column="1" FontSize="15" FontWeight="Medium"></Label>
+        <PasswordBox x:Name="pwbox" Grid.Column="1" Grid.Row="5" FontSize="15" BorderThickness="2"></PasswordBox>
+        <CheckBox Content="Remember Me" Foreground="Black" Grid.Row="7" Grid.Column="1"></CheckBox>
+        <Button Content="{x:Static lang:Resourcefile.Loginbn}" Foreground="Black" Background="Wheat"  Grid.Column="1" Grid.Row="8" FontSize="15" FontWeight="Medium" BorderThickness="2" Click="Button_Click_1">
+        <Button.Resources>
+            <Style TargetType="Border">
+                <Setter Property="CornerRadius" Value="8"></Setter> 
+            </Style>
+        </Button.Resources>
+        </Button>
+        <Label Content="Don't Have an Account Yet ?" Foreground="Black" Grid.Row="10" Grid.Column="1" FontSize="10" FontWeight="Medium"></Label>
+        <Button Content="{x:Static lang:Resourcefile.registerbn}" Foreground="Black" Background="Wheat"  Grid.Column="1" Grid.Row="11" FontSize="15" FontWeight="Medium" BorderThickness="2" Click="Button_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="8"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+    </Grid>
+</Window>
